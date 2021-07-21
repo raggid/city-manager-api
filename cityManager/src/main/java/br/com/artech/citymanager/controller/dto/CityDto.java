@@ -1,20 +1,31 @@
 package br.com.artech.citymanager.controller.dto;
 
 import br.com.artech.citymanager.domain.City;
+import com.opencsv.bean.CsvBindByName;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class CityDto {
+    @CsvBindByName
     private Long ibge_id;
+    @CsvBindByName
     private String uf;
+    @CsvBindByName
     private String name;
+    @CsvBindByName
     private Boolean capital;
-    private Long lon;
-    private Long lat;
+    @CsvBindByName
+    private String lon;
+    @CsvBindByName
+    private String lat;
+    @CsvBindByName
     private String no_accents;
+    @CsvBindByName
     private String alternative_names;
+    @CsvBindByName
     private String microregion;
+    @CsvBindByName
     private String mesoregion;
 
     public CityDto(){}
@@ -52,11 +63,11 @@ public class CityDto {
         return capital;
     }
 
-    public Long getLon() {
+    public String getLon() {
         return lon;
     }
 
-    public Long getLat() {
+    public String getLat() {
         return lat;
     }
 

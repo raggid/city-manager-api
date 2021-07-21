@@ -17,8 +17,8 @@ public class City {
     private String uf;
     private String name;
     private Boolean capital;
-    private Long lon;
-    private Long lat;
+    private String lon;
+    private String lat;
     private String no_accents;
     private String alternative_names;
     private String microregion;
@@ -41,7 +41,7 @@ public class City {
         this.mesoregion = cityDto.getMesoregion();
     }
 
-    public City(Long ibge_id, String uf, String name, Long lon, Long lat) {
+    public City(Long ibge_id, String uf, String name, String lon, String lat) {
         this.ibgeId = ibge_id;
         this.uf = uf;
         this.name = name;
@@ -66,11 +66,11 @@ public class City {
         return capital;
     }
 
-    public Long getLon() {
+    public String getLon() {
         return lon;
     }
 
-    public Long getLat() {
+    public String getLat() {
         return lat;
     }
 

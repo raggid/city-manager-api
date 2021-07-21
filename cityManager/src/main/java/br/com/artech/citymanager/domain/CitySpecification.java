@@ -8,7 +8,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 public class CitySpecification implements Specification<City> {
-    private String randomColumnName; // A varchar column.
+    private String randomColumnName;
     private String valueToSearchFor;
 
     public CitySpecification(String randomColumnName, String valueToSearchFor) {
